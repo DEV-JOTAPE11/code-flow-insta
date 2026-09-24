@@ -1,0 +1,21 @@
+<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="seta-contratar.svg" clip-path="url(#clip0_104_464)">
+<g id="Clip path group">
+<mask id="mask0_104_464" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+<g id="a">
+<path id="Vector" d="M24.4629 0H0.462891V24H24.4629V0Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_104_464)">
+<g id="Group">
+<path id="Vector_2" d="M1.7959 22.6663L23.1292 1.33301M23.1292 1.33301V15.9997M23.1292 1.33301H8.46257" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_104_464">
+<rect width="25" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

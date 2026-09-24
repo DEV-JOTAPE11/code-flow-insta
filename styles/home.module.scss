@@ -1,0 +1,108 @@
+.container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/hero-blue.png');
+    height: 100%;
+    width: 100vw;
+    background-size: cover;
+    z-index: -1;
+    @media screen and (min-width: 2000px) {
+        height: 100vh;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-inline: 65px;
+    gap: 30px;
+    @media screen and (max-width: 768px) {
+        padding-inline: 20px;
+        gap: 20px;
+    }
+}
+
+.logoSection {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 40px;
+
+    img {
+        width: 280px;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.top {
+    display: flex;
+    gap: 17px;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+        // Reorder for mobile: Cost first, then Course
+        .right {
+            order: 1;
+        }
+        .left {
+            order: 2;
+        }
+    }
+}
+
+.left {
+    display: flex;
+    width: 100%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.footer {
+    display: flex;
+    align-items: self-end;
+    gap: 49px;
+    padding-top: 70px;
+    padding-bottom: 30px;
+
+    img {
+        width: 200px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+    }
+    p {
+        color: #b8b8b8;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19.6px;
+    }
+}
+
+// Visibility helpers
+.desktopOnly {
+    display: block;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.mobileOnly {
+    display: none;
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+}
