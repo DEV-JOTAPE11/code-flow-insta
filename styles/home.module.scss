@@ -24,6 +24,12 @@
     }
 }
 
+.title {
+    margin: 0;
+    font-size: inherit;
+    line-height: 0;
+}
+
 .logoSection {
     display: flex;
     justify-content: center;

@@ -10,10 +10,17 @@ import styles from '../../styles/home.module.scss';
 export default function Home() {
     return (
         <MotionConfig reducedMotion="user">
-            <section className={styles.container}>
+            <main className={styles.container}>
                 <div className={styles.content}>
                     <FadeUp className={styles.logoSection} delay={0.2}>
-                        <img src="/logo.png" alt="Code Flow" />
+                        <h1 className={styles.title}>
+                            <img
+                                src="/logo.png"
+                                alt="Code Flow — links oficiais: aprenda sites e IA ou solicite um orçamento"
+                                width={1363}
+                                height={282}
+                            />
+                        </h1>
                     </FadeUp>
 
                     <div className={styles.cards}>
@@ -26,10 +33,10 @@ export default function Home() {
                     </div>
 
                     <FadeUp className={styles.footer} delay={1.2}>
-                        <img src="/logo.png" alt="Code Flow" />
+                        <img src="/logo.png" alt="" width={1363} height={282} />
                     </FadeUp>
                 </div>
-            </section>
+            </main>
         </MotionConfig>
     );
 }
