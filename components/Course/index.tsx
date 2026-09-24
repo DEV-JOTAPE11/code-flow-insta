@@ -1,15 +1,12 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import styles from './styles.module.scss';
 
-interface CourseProps {
-    urlParams: string;
-}
+const WHATSAPP_GROUP_URL =
+    'https://chat.whatsapp.com/F34hp0dZhxDFLKAiAR6vg0?s=cl&p=i&mlu=0&ilr=4';
 
-const Course = ({ urlParams }: CourseProps) => {
-    const router = useRouter();
+const Course = () => {
 
     const [lightPosition, setLightPosition] = useState({
         x: 0,
@@ -58,7 +55,7 @@ const Course = ({ urlParams }: CourseProps) => {
                 );
         }
 
-        router.push(`https://www.herbertcarnauba.com.br/new-course?curso`);
+        window.location.href = WHATSAPP_GROUP_URL;
     };
 
     return (
@@ -71,7 +68,7 @@ const Course = ({ urlParams }: CourseProps) => {
             tabIndex={0}
             onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
-                    router.push(`/new-course?${urlParams}`);
+                    window.location.href = WHATSAPP_GROUP_URL;
                 }
             }}
         >
@@ -86,7 +83,7 @@ const Course = ({ urlParams }: CourseProps) => {
             />
             <div className={styles.content}>
                 <div className={styles.icon}>
-                    <img src="/newicon.png" alt="" />
+                    <img src="/code-flow-symbol.png" alt="" />
                 </div>
                 <div className={styles.text}>
                     <h2>Clique aqui para aprender!</h2>

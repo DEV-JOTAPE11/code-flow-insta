@@ -1,11 +1,13 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import styles from './styles.module.scss';
 
+const WHATSAPP_QUOTE_URL = `https://wa.me/5538999743350?text=${encodeURIComponent(
+    'Olá! Tudo bem? Gostaria de fazer um orçamento de um site.'
+)}`;
+
 const Cost = () => {
-    const router = useRouter();
 
     const [lightPosition, setLightPosition] = useState({
         x: 0,
@@ -34,7 +36,7 @@ const Cost = () => {
 
     const handleClick = (e: React.MouseEvent) => {
         e.preventDefault();
-        router.push('https://www.herbertcarnauba.com.br/organic/orcamento');
+        window.location.href = WHATSAPP_QUOTE_URL;
     };
 
     return (
@@ -47,7 +49,7 @@ const Cost = () => {
             tabIndex={0}
             onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ')
-                    router.push('/organic/orcamento');
+                    window.location.href = WHATSAPP_QUOTE_URL;
             }}
         >
             <div

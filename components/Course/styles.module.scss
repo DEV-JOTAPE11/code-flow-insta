@@ -70,6 +70,12 @@
 
 .icon {
     z-index: 3;
+
+    img {
+        display: block;
+        height: 40px;
+        width: auto;
+    }
 }
 
 .text {

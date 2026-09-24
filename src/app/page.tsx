@@ -1,45 +1,35 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation';
-import { Suspense } from 'react';
+import { MotionConfig } from 'motion/react';
 
 import Cost from '../../components/Cost';
 import Course from '../../components/Course';
+import { CardReveal, FadeUp } from '../../components/motion-primitives';
 import styles from '../../styles/home.module.scss';
-
-function HomeContent() {
-    const searchParams = useSearchParams();
-
-    // If you want the whole query string (e.g. "curso=abc&x=1") like you had before:
-    const queryParams = searchParams?.toString() || 'curso';
-
-    // If you actually want a specific param, do this instead:
-    // const curso = searchParams.get('curso') ?? 'curso';
-
-    return (
-        <section className={styles.container}>
-            <div className={styles.content}>
-                <div className={styles.logoSection}>
-                    <img src="/logo.png" alt="Code Flow" />
-                </div>
-
-                <div className={styles.cards}>
-                    <Course urlParams={queryParams} />
-                    <Cost />
-                </div>
-
-                <div className={styles.footer}>
-                    <img src="/logo.png" alt="Code Flow" />
-                </div>
-            </div>
-        </section>
-    );
-}
 
 export default function Home() {
     return (
-        <Suspense>
-            <HomeContent />
-        </Suspense>
+        <MotionConfig reducedMotion="user">
+            <section className={styles.container}>
+                <div className={styles.content}>
+                    <FadeUp className={styles.logoSection} delay={0.2}>
+                        <img src="/logo.png" alt="Code Flow" />
+                    </FadeUp>
+
+                    <div className={styles.cards}>
+                        <CardReveal className={styles.cardItem} delay={0.55}>
+                            <Course />
+                        </CardReveal>
+                        <CardReveal className={styles.cardItem} delay={0.85}>
+                            <Cost />
+                        </CardReveal>
+                    </div>
+
+                    <FadeUp className={styles.footer} delay={1.2}>
+                        <img src="/logo.png" alt="Code Flow" />
+                    </FadeUp>
+                </div>
+            </section>
+        </MotionConfig>
     );
 }
