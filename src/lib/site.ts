@@ -1,4 +1,4 @@
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://codeflowbr.com';
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.codeflowbr.com';
 
 export const SITE_NAME = 'Code Flow';
 
