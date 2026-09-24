@@ -5,8 +5,6 @@ import { Suspense } from 'react';
 
 import Cost from '../../components/Cost';
 import Course from '../../components/Course';
-import TikTok from '../../components/Tiktok';
-import Youtube from '../../components/Youtube';
 import styles from '../../styles/home.module.scss';
 
 function HomeContent() {
@@ -25,25 +23,9 @@ function HomeContent() {
                     <img src="/logo.png" alt="Code Flow" />
                 </div>
 
-                <div className={styles.top}>
-                    <div className={styles.left}>
-                        <Course urlParams={queryParams} />
-                    </div>
-
-                    <div className={styles.right}>
-                        <Cost />
-                        <div className={styles.desktopOnly}>
-                            <Youtube />
-                        </div>
-                    </div>
-                </div>
-
-                <div className={styles.bottom}>
-                    <TikTok />
-                </div>
-
-                <div className={styles.mobileOnly}>
-                    <Youtube />
+                <div className={styles.cards}>
+                    <Course urlParams={queryParams} />
+                    <Cost />
                 </div>
 
                 <div className={styles.footer}>

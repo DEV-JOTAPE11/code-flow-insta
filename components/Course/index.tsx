@@ -89,12 +89,8 @@ const Course = ({ urlParams }: CourseProps) => {
                     <img src="/newicon.png" alt="" />
                 </div>
                 <div className={styles.text}>
-                    <h2>APRENDA TECNOLOGIA POR R$97!</h2>
-                    <h5>
-                        Nosso curso de programação mais completo e prático! Você
-                        vai aprender tudo que você precisa para sair do zero
-                        pagando apenas R$97 tendo acesso vitalício!
-                    </h5>
+                    <h2>Clique aqui para aprender!</h2>
+                    <h5>Sites, IA e networking</h5>
                 </div>
             </div>
         </section>

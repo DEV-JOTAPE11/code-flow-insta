@@ -66,8 +66,7 @@ const Cost = () => {
                 <div className={styles.text}>
                     <h2>Realizar orçamento</h2>
                     <h5>
-                        Solicite um orçamento para ter seu próprio site feito
-                        pelo rei.
+                        Solicite um orçamento para ter seu site de qualidade.
                     </h5>
                 </div>
             </div>
